@@ -498,6 +498,10 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Register your application here" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="lpC-lH-g2F">
                                 <rect key="frame" x="79" y="431" width="256" height="34"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="F0o-Wv-sI8"/>
+                                    <constraint firstAttribute="height" constant="34" id="sM7-8B-Kqz"/>
+                                </constraints>
                                 <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -505,10 +509,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Lc3-qL-XtZ" firstAttribute="trailing" secondItem="lpC-lH-g2F" secondAttribute="trailing" constant="79" id="Kxm-4O-lO7"/>
-                            <constraint firstItem="lpC-lH-g2F" firstAttribute="leading" secondItem="Lc3-qL-XtZ" secondAttribute="leading" constant="79" id="WLs-hZ-ZJb"/>
-                            <constraint firstItem="lpC-lH-g2F" firstAttribute="top" secondItem="Lc3-qL-XtZ" secondAttribute="top" constant="387" id="bTZ-MG-qBT"/>
-                            <constraint firstItem="Lc3-qL-XtZ" firstAttribute="bottom" secondItem="lpC-lH-g2F" secondAttribute="bottom" constant="348" id="j2Z-Ph-33U"/>
+                            <constraint firstItem="lpC-lH-g2F" firstAttribute="centerX" secondItem="jvV-xb-UEe" secondAttribute="centerX" id="D3q-q7-QEH"/>
+                            <constraint firstItem="lpC-lH-g2F" firstAttribute="centerY" secondItem="jvV-xb-UEe" secondAttribute="centerY" id="fT5-6Z-Vbs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lc3-qL-XtZ"/>
                     </view>
@@ -586,6 +588,7 @@
                                     </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="dQS-6x-c7M" firstAttribute="centerX" secondItem="NzL-K6-8zm" secondAttribute="centerX" id="Cpc-rf-UAP"/>
                                     <constraint firstItem="EEf-iK-xoX" firstAttribute="height" secondItem="dQS-6x-c7M" secondAttribute="height" id="OdK-sq-WT6"/>
                                     <constraint firstItem="TeD-lX-nq2" firstAttribute="height" secondItem="dQS-6x-c7M" secondAttribute="height" id="WP7-xm-wdr"/>
                                     <constraint firstItem="AcN-mw-ASm" firstAttribute="height" secondItem="dQS-6x-c7M" secondAttribute="height" id="n8g-vv-ZBj"/>

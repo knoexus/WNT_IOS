@@ -24,7 +24,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         setUpElements()
-        // Do any additional setup after loading the view.
     }
     
     func setUpElements() {
@@ -36,6 +35,19 @@ class LoginViewController: UIViewController {
         Utilities.styleFilledButton(loginButton)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            if Auth.auth().currentUser != nil {
+                let tabBarController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.tabBarController)
+                    as? TabBarController
+
+                self.view.window?.rootViewController = tabBarController
+                self.view.window?.makeKeyAndVisible()
+            }
+        }
+    }
+
     
     @IBAction func loginTapped(_ sender: Any) {
         
@@ -50,7 +62,7 @@ class LoginViewController: UIViewController {
             else {
                 let tabBarController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.tabBarController)
                     as? TabBarController
-                
+
                 self.view.window?.rootViewController = tabBarController
                 self.view.window?.makeKeyAndVisible()
             }

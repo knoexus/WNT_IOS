@@ -87,15 +87,25 @@ class DigestViewController: UIViewController, UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         print("registered")
         let pdfName = z[indexPath.item]
+//        if let url = Bundle.main.url(forResource: pdfName, withExtension: "pdf") {
+//            let webView = UIWebView(frame: self.view.frame)
+//            let urlRequest = URLRequest(url: url)
+//            webView.loadRequest(urlRequest as URLRequest)
+//            webView.scalesPageToFit = true
+//            let pdfVC = UIViewController()
+//            pdfVC.view.addSubview(webView)
+//            pdfVC.title = "Your Digest"
+//            self.navigationController?.pushViewController(pdfVC, animated: true)
+//        }
         if let url = Bundle.main.url(forResource: pdfName, withExtension: "pdf") {
+            let pdfVC = UIViewController()
+            pdfVC.title = "Your Digest"
+            self.navigationController?.pushViewController(pdfVC, animated: true)
             let webView = UIWebView(frame: self.view.frame)
             let urlRequest = URLRequest(url: url)
             webView.loadRequest(urlRequest as URLRequest)
             webView.scalesPageToFit = true
-            let pdfVC = UIViewController()
             pdfVC.view.addSubview(webView)
-            pdfVC.title = "Your Digest"
-            self.navigationController?.pushViewController(pdfVC, animated: true)
         }
     }
     

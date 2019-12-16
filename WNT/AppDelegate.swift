@@ -12,12 +12,39 @@ import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
+//        DispatchQueue.main.async {
+//            FirebaseApp.configure()
+//            if Auth.auth().currentUser != nil {
+//                let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                let tabBarController = mainStoryboard.instantiateViewController(identifier: Constants.Storyboard.tabBarController)
+//                    as? TabBarController
+//                self.window = UIWindow(frame: UIScreen.main.bounds)
+//                self.window?.rootViewController = tabBarController
+//                self.window?.makeKeyAndVisible()
+//            }
+//        }
+        
+//        DispatchQueue.main.async {
+//            FirebaseApp.configure()
+//            if Auth.auth().currentUser != nil {
+//                if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Constants.Storyboard.tabBarController) as? TabBarController {
+//                        if let window = self.window, let rootViewController = window.rootViewController {
+//                            self.window = UIWindow(frame: UIScreen.main.bounds)
+//                            var currentController = rootViewController
+//                            while let presentedController = currentController.presentedViewController {
+//                                currentController = presentedController
+//                            }
+//                            currentController.present(controller, animated: true, completion: nil)
+//                        }
+//                    }
+//            }
+//        }
         
         return true
     }
