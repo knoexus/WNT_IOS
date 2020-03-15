@@ -9,7 +9,8 @@
 import UIKit
 import FirebaseAuth
 import Firebase
-
+import WebKit
+import PDFKit
 
 class DigestViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -101,16 +102,18 @@ class DigestViewController: UIViewController, UICollectionViewDelegate, UICollec
             let pdfVC = UIViewController()
             pdfVC.title = "Your Digest"
             self.navigationController?.pushViewController(pdfVC, animated: true)
-            let webView = UIWebView(frame: self.view.frame)
+            let webView = WKWebView()
+            webView.frame = self.view.frame
+            
             let urlRequest = URLRequest(url: url)
-            webView.loadRequest(urlRequest as URLRequest)
-            webView.scalesPageToFit = true
+            webView.load(urlRequest as URLRequest)
+            //webView.scalesLargeContentImage
             pdfVC.view.addSubview(webView)
         }
     }
     
     private func fetchDigests(completion: @escaping (Array<String>) -> Void){
-        let user = Auth.auth().currentUser?.uid
+        guard let user = Auth.auth().currentUser?.uid else { return; }
         let db = Firestore.firestore()
         db.collection("users").whereField("uid", isEqualTo: user)
             .getDocuments { (snapshot, error) in
