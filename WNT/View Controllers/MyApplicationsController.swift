@@ -1,5 +1,5 @@
 //
-//  TranslationsController.swift
+//  MyApplicationsController.swift
 //  WNT
 //
 //  Created by AD on 16.03.2020.
@@ -7,24 +7,35 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
-let cellNames: [String] = ["My applications", "Create New Application"]
-let kReUseIdentifier: String = "tsCell"
+var applications = [String]()
+let cellIdentifier: String = "maCell"
 
-class TranslationsController: UITableViewController {
+class MyApplicationsController: UITableViewController {
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        queryApplications()
 
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        applications = []
+    }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
 
     // MARK: - Table view data source
 
@@ -35,35 +46,35 @@ class TranslationsController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return cellNames.count
+        return applications.count
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func queryApplications(){
+        guard let user = Auth.auth().currentUser?.uid else { return; }
+           let db = Firestore.firestore()
+           db.collection("applications").whereField("userId", isEqualTo: user)
+               .getDocuments { (snapshot, error) in
+                    if let error = error {
+                        print(error.localizedDescription)
+                    }
+                    else {
+                        for document in snapshot!.documents {
+                            applications.append("\(String(describing: document.data()["userId"]))")
+                        }
+                        self.tableView.reloadData()
+                    }
+                }
 
-        tableView.deselectRow(at: indexPath, animated: true)
-
-        switch indexPath.row {
-            case 0:
-                guard let myApplicationsVC = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.myApplicationsController)
-                    as? MyApplicationsController else { return }
-                myApplicationsVC.title = "My applications"
-                self.navigationController?.pushViewController(myApplicationsVC, animated: true)
-            case 1:
-                guard let applicationFormVC = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.applicationFormController)
-                    as? ApplicationFormController else { return }
-                applicationFormVC.title = "Create New Application"
-                self.navigationController?.pushViewController(applicationFormVC, animated: true)
-            default:
-                return
-            }
     }
+
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: kReUseIdentifier, for: indexPath) as? TranslationsCell else {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? MyApplicationCellTableViewCell else {
             fatalError("Could not cast the cell to the approptiate type")
         }
         
-        cell.tsCellLabel.text = cellNames[indexPath.row]
+        cell.mainLabel.text = applications[indexPath.row]
 
         return cell
     }

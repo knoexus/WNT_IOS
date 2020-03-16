@@ -16,6 +16,7 @@ struct Constants {
         static let tabBarController = "TabBarVC"
         static let loginViewController = "LoginVC"
         static let applicationFormController = "AppFVC"
+        static let myApplicationsController = "MyAppVC"
         
     }
     

@@ -11,6 +11,8 @@
 		F149CAAB241FA0BB00CD4862 /* ApplicationFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149CAAA241FA0BB00CD4862 /* ApplicationFormController.swift */; };
 		F149CAAD241FA64A00CD4862 /* TranslationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149CAAC241FA64A00CD4862 /* TranslationsController.swift */; };
 		F149CAAF241FAD5E00CD4862 /* TranslationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149CAAE241FAD5E00CD4862 /* TranslationsCell.swift */; };
+		F149CAB1241FC3BC00CD4862 /* MyApplicationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149CAB0241FC3BC00CD4862 /* MyApplicationsController.swift */; };
+		F149CAB3241FD03000CD4862 /* MyApplicationCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149CAB2241FD03000CD4862 /* MyApplicationCellTableViewCell.swift */; };
 		F1C8B8F1239C611F00F168A9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C8B8F0239C611F00F168A9 /* Constants.swift */; };
 		F1DF87B0239C591A00B1353B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DF87AF239C591A00B1353B /* Utilities.swift */; };
 		F1E8038923A3979700B8CD18 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E8038823A3979700B8CD18 /* CollectionViewCell.swift */; };
@@ -41,6 +43,8 @@
 		F149CAAA241FA0BB00CD4862 /* ApplicationFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationFormController.swift; sourceTree = "<group>"; };
 		F149CAAC241FA64A00CD4862 /* TranslationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationsController.swift; sourceTree = "<group>"; };
 		F149CAAE241FAD5E00CD4862 /* TranslationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationsCell.swift; sourceTree = "<group>"; };
+		F149CAB0241FC3BC00CD4862 /* MyApplicationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApplicationsController.swift; sourceTree = "<group>"; };
+		F149CAB2241FD03000CD4862 /* MyApplicationCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApplicationCellTableViewCell.swift; sourceTree = "<group>"; };
 		F1C8B8F0239C611F00F168A9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F1DF87AF239C591A00B1353B /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		F1E8038823A3979700B8CD18 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 				F149CAAA241FA0BB00CD4862 /* ApplicationFormController.swift */,
 				F149CAAC241FA64A00CD4862 /* TranslationsController.swift */,
 				F149CAAE241FAD5E00CD4862 /* TranslationsCell.swift */,
+				F149CAB0241FC3BC00CD4862 /* MyApplicationsController.swift */,
+				F149CAB2241FD03000CD4862 /* MyApplicationCellTableViewCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -300,8 +306,10 @@
 				F149CAAF241FAD5E00CD4862 /* TranslationsCell.swift in Sources */,
 				F1F50840239C022C00DC6BE9 /* SignUpViewController.swift in Sources */,
 				F1F50842239C024100DC6BE9 /* LoginViewController.swift in Sources */,
+				F149CAB1241FC3BC00CD4862 /* MyApplicationsController.swift in Sources */,
 				F1E8038B23A3A34900B8CD18 /* DigestViewController.swift in Sources */,
 				F1F5082E239C01C100DC6BE9 /* SceneDelegate.swift in Sources */,
+				F149CAB3241FD03000CD4862 /* MyApplicationCellTableViewCell.swift in Sources */,
 				F1F50844239C025A00DC6BE9 /* HomeViewController.swift in Sources */,
 				F149CAAB241FA0BB00CD4862 /* ApplicationFormController.swift in Sources */,
 				F1C8B8F1239C611F00F168A9 /* Constants.swift in Sources */,
