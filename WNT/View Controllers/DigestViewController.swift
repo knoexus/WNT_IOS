@@ -85,7 +85,7 @@ class DigestViewController: UIViewController, UICollectionViewDelegate, UICollec
         
     }
     
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("registered")
         let pdfName = z[indexPath.item]
 //        if let url = Bundle.main.url(forResource: pdfName, withExtension: "pdf") {

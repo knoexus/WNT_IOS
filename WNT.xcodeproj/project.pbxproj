@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BB085771FF62EFD143C67429 /* Pods_WNT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4DE8A49BA4351F43006BE3A /* Pods_WNT.framework */; };
+		F149CAAB241FA0BB00CD4862 /* ApplicationFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149CAAA241FA0BB00CD4862 /* ApplicationFormController.swift */; };
+		F149CAAD241FA64A00CD4862 /* TranslationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149CAAC241FA64A00CD4862 /* TranslationsController.swift */; };
+		F149CAAF241FAD5E00CD4862 /* TranslationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149CAAE241FAD5E00CD4862 /* TranslationsCell.swift */; };
 		F1C8B8F1239C611F00F168A9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C8B8F0239C611F00F168A9 /* Constants.swift */; };
 		F1DF87B0239C591A00B1353B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DF87AF239C591A00B1353B /* Utilities.swift */; };
 		F1E8038923A3979700B8CD18 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E8038823A3979700B8CD18 /* CollectionViewCell.swift */; };
@@ -35,6 +38,9 @@
 		62BF1CE18F2D8F79B98238E8 /* Pods-WNT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNT.release.xcconfig"; path = "Target Support Files/Pods-WNT/Pods-WNT.release.xcconfig"; sourceTree = "<group>"; };
 		A4DE8A49BA4351F43006BE3A /* Pods_WNT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WNT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D561EEE2CD4B10E8DA9FCAF9 /* Pods-WNT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNT.debug.xcconfig"; path = "Target Support Files/Pods-WNT/Pods-WNT.debug.xcconfig"; sourceTree = "<group>"; };
+		F149CAAA241FA0BB00CD4862 /* ApplicationFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationFormController.swift; sourceTree = "<group>"; };
+		F149CAAC241FA64A00CD4862 /* TranslationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationsController.swift; sourceTree = "<group>"; };
+		F149CAAE241FAD5E00CD4862 /* TranslationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationsCell.swift; sourceTree = "<group>"; };
 		F1C8B8F0239C611F00F168A9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F1DF87AF239C591A00B1353B /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		F1E8038823A3979700B8CD18 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -147,6 +153,9 @@
 				F1E8038823A3979700B8CD18 /* CollectionViewCell.swift */,
 				F1E8038A23A3A34900B8CD18 /* DigestViewController.swift */,
 				F1F1847123A563970088E64E /* SettingsController.swift */,
+				F149CAAA241FA0BB00CD4862 /* ApplicationFormController.swift */,
+				F149CAAC241FA64A00CD4862 /* TranslationsController.swift */,
+				F149CAAE241FAD5E00CD4862 /* TranslationsCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -286,12 +295,15 @@
 				F1F50830239C01C100DC6BE9 /* ViewController.swift in Sources */,
 				F1F5082C239C01C100DC6BE9 /* AppDelegate.swift in Sources */,
 				F1DF87B0239C591A00B1353B /* Utilities.swift in Sources */,
+				F149CAAD241FA64A00CD4862 /* TranslationsController.swift in Sources */,
 				F1E9636A239E9C66008EB8B7 /* TabBarController.swift in Sources */,
+				F149CAAF241FAD5E00CD4862 /* TranslationsCell.swift in Sources */,
 				F1F50840239C022C00DC6BE9 /* SignUpViewController.swift in Sources */,
 				F1F50842239C024100DC6BE9 /* LoginViewController.swift in Sources */,
 				F1E8038B23A3A34900B8CD18 /* DigestViewController.swift in Sources */,
 				F1F5082E239C01C100DC6BE9 /* SceneDelegate.swift in Sources */,
 				F1F50844239C025A00DC6BE9 /* HomeViewController.swift in Sources */,
+				F149CAAB241FA0BB00CD4862 /* ApplicationFormController.swift in Sources */,
 				F1C8B8F1239C611F00F168A9 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
