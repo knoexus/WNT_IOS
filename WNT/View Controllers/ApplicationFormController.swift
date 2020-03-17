@@ -51,6 +51,7 @@ class ApplicationFormController: UIViewController {
             "phone": phoneField.text ?? "",
             "sample": sampleText.text ?? "",
             "userId": user,
+            "date": Date()
         ]) { (error) in
             if let error = error {
                 self.createAlert(title: "Error", message: error.localizedDescription)

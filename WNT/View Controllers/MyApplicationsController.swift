@@ -59,7 +59,11 @@ class MyApplicationsController: UITableViewController {
                     }
                     else {
                         for document in snapshot!.documents {
-                            applications.append("\(String(describing: document.data()["userId"]))")
+                            let dt = document.data()
+                            let type = dt["type"] ?? "not set"
+                            let volume = dt["volume"] ?? "not set"
+                            let language = dt["language"] ?? "not set"
+                            applications.append("Type: \(String(describing: type)) - Vol: \(String(describing: volume)) - Lang: \(String(describing: language))")
                         }
                         self.tableView.reloadData()
                     }
