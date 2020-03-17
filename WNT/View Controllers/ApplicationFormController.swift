@@ -14,6 +14,12 @@ class ApplicationFormController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        langField.delegate = self as? UITextFieldDelegate
+        volumeField.delegate = self as? UITextFieldDelegate
+        typeField.delegate = self as? UITextFieldDelegate
+        duedateField.delegate = self as? UITextFieldDelegate
+        phoneField.delegate = self as? UITextFieldDelegate
+        sampleText.delegate = self as? UITextViewDelegate
     }
     
     func createAlert(title: String, message: String){
@@ -51,7 +57,7 @@ class ApplicationFormController: UIViewController {
             "phone": phoneField.text ?? "",
             "sample": sampleText.text ?? "",
             "userId": user,
-            "date": Date()
+            "timestamp": Date()
         ]) { (error) in
             if let error = error {
                 self.createAlert(title: "Error", message: error.localizedDescription)
@@ -60,5 +66,22 @@ class ApplicationFormController: UIViewController {
                 self.createAlert(title: "Success", message: "You application has been successfully submitted")
             }
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        langField.resignFirstResponder()
+        volumeField.resignFirstResponder()
+        typeField.resignFirstResponder()
+        duedateField.resignFirstResponder()
+        phoneField.resignFirstResponder()
+        sampleText.resignFirstResponder()
+    }
+    
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
